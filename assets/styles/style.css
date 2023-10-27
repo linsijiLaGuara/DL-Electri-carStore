@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center, .pie-pagina .item-redes, .pie-pagina, .busqueda .texbuscaqueda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-horizontal, .navbarheader .items-car {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.t-texto {
+  font-size: 20px;
+  padding: 20px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contenedor-cars {
+  display: grid;
+  border: 1px solid black;
+  grid-template-rows: auto 2fr 7fr;
+  grid-template-areas: "menu" "busqueda" "seccion-principal" "pie-de-pagina";
+}
+@media (min-width: 768px) {
+  .contenedor-cars {
+    min-height: 95vh;
+    grid-template-areas: "menu busqueda" "menu seccion-principal" "pie-de-pagina seccion-principal";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 10rem 2fr;
+  }
+}
+@media (min-width: 992px) {
+  .contenedor-cars {
+    min-height: 95vh;
+    grid-template-areas: "menu busqueda" "menu seccion-principal" "menu seccion-principal" "menu pie-de-pagina";
+    grid-template-rows: auto 10fr auto;
+    grid-template-columns: 10rem 1fr;
+  }
+}
+
+.navbarheader {
+  padding: 10px;
+  grid-area: menu;
+  color: white;
+  background: #0037a1;
+}
+.navbarheader .items-car {
+  font-size: 20px;
+  padding: 20px;
+}
+
+.busqueda {
+  padding: 10px;
+  grid-area: busqueda;
+  background-color: #babcbe;
+  height: -moz-min-content;
+  height: min-content;
+}
+.busqueda .search-input {
+  width: 95%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  margin-right: -5px;
+}
+.busqueda .search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #0037a1;
+  color: white;
+  cursor: pointer;
+}
+.busqueda #search-form {
+  padding-top: -5px;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  padding: 10px;
+  grid-area: seccion-principal;
+}
+
+.pie-pagina {
+  padding: 10px;
+  grid-area: pie-de-pagina;
+  background: #041a47;
+  color: white;
+  text-align: center;
+}
+.pie-pagina .item-redes {
+  gap: 5px;
+}/*# sourceMappingURL=style.css.map */

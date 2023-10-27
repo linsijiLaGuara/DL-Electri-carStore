@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.t-texto {
+  font-size: 20px;
+  padding: 20px;
+}
+$color-texto: white;
+$padding: 10px;
+$color-header: #0037a1;
+$color-footer: #041a47;
+$large: "(min-width: 992px)";
+$medium: "(min-width: 768px)";
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contenedor-cars {
+  display: grid;
+
+  border: 1px solid black;
+  grid-template-rows: auto 2fr 7fr;
+  grid-template-areas:
+    "menu"
+    "busqueda"
+    "seccion-principal"
+    "pie-de-pagina";
+
+  @media #{$medium} {
+    min-height: 95vh;
+    grid-template-areas:
+      "menu busqueda"
+      "menu seccion-principal"
+      "pie-de-pagina seccion-principal";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 10rem 2fr;
+  }
+  @media #{$large} {
+    min-height: 95vh;
+    grid-template-areas:
+      "menu busqueda"
+      "menu seccion-principal"
+      "menu seccion-principal"
+      "menu pie-de-pagina";
+    grid-template-rows: auto 10fr auto;
+    grid-template-columns: 10rem 1fr;
+  }
+}
+
+.navbarheader {
+  padding: $padding;
+  grid-area: menu;
+  color: white;
+  background: $color-header;
+  .items-car {
+    @extend .flex-horizontal;
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+.busqueda {
+  padding: $padding;
+  grid-area: busqueda;
+  background-color: #babcbe;
+
+  height: min-content;
+  .texbuscaqueda {
+    @extend .flex-center;
+  }
+  .search-input {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    margin-right: -5px;
+  }
+
+  .search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #0037a1;
+    color: white;
+    cursor: pointer;
+  }
+
+  #search-form {
+    padding-top: -5px;
+    display: flex;
+    align-items: center;
+  }
+}
+main {
+  padding: $padding;
+  grid-area: seccion-principal;
+}
+
+.pie-pagina {
+  padding: $padding;
+  grid-area: pie-de-pagina;
+  background: $color-footer;
+  color: $color-texto;
+  @extend .flex-center;
+  text-align: center;
+  .item-redes {
+    @extend .flex-center;
+    gap: 5px;
+  }
+}
