@@ -13,7 +13,7 @@
   <body>
     <div class="contenedor-cars">
       <header class="busqueda">
-        <h3 class="texbuscaqueda">Ordenado Por:</h3>
+        <p class="texbuscaqueda">Ordenado Por:</p>
         <form id="search-form">
           <input type="text" placeholder="Precio..." class="search-input" />
           <button type="submit" class="search-button">Buscar</button>
@@ -21,11 +21,32 @@
       </header>
       <nav class="navbarheader">
         <div class="items-car">
-          <h3 class="textnav">
-            Electri Cars <i class="fa-solid fa-car-rear"></i>
-          </h3>
+          <p class="textnav">
+            <i class="fa-solid fa-car-rear"></i> Electri Cars
+          </p>
           <i class="fa-solid fa-bars"></i>
+       
+          <div class="items-nav-horizontal">
+            <a>Inicio</a>
+            <a>Catálogo</a>
+            <a>Oferta</a>
+            <a>Contacto</a>
+          </div>
         </div>
+        <ul class="items-nav-vertical">
+          <li>
+            <p>Inicio</p>
+          </li>
+          <li>
+            <p>Catálogo</p>
+          </li>
+          <li>
+            <p>Oferta</p>
+          </li>
+          <li>
+            <p>Contacto</p>
+          </li>
+        </ul>
       </nav>
       <main>Sección principal</main>
       <footer class="pie-pagina">
