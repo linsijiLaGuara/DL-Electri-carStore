@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 
-.flex-vertical {
-  display: flex;
-  flex-direction: column;
-}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -14,14 +11,11 @@
   justify-content: space-between;
   align-items: center;
 }
-.t-texto-sm {
-  font-size: 15px;
-  padding: 20px;
-}
 .t-texto {
   font-size: 12px;
   padding: 20px;
 }
+
 $color-texto: white;
 $padding: 10px;
 $color-header: #0037a1;
@@ -188,15 +182,15 @@ body {
   padding: $padding;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
+  gap: 10px;
 
   .contener-cards {
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    padding: 10px;
+    padding: $padding;
     border-radius: 5px;
 
     .contenedor-img {
@@ -229,7 +223,7 @@ body {
         justify-content: center;
         align-items: center;
         color: black;
-        padding: 10px;
+        padding: $padding;
 
         .card_boton {
           height: 30px;
@@ -249,22 +243,20 @@ body {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-      align-content: space-around;
       gap: 30px;
-      padding: 10px;
+      padding: $padding;
       border-radius: 5px;
     }
   }
 
   @media #{$large} {
     .contener-cards {
-      padding: 10px;
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-      align-content: center;
-      border-radius: 5px;
       gap: 30px;
+      padding: $padding;
+      border-radius: 5px;
     }
   }
 }
