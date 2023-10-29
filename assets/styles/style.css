@@ -229,7 +229,9 @@ body {
     flex-direction: row;
     justify-content: space-between;
     gap: 12px;
-    height: 60%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
   }
 }
 @media (min-width: 992px) {
@@ -238,42 +240,35 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 12px;
     width: 100%;
-  }
-  .main-content .card_body {
-    overflow: hidden;
-    transition: all 1s ease-in-out;
-  }
-  .main-content .card_body img {
-    width: 100%;
-    height: 50%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    opacity: 1;
-  }
-  .main-content .pagination {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    padding-bottom: 20px;
-    height: 20px;
-    margin-bottom: 30px;
-    position: relative;
-    z-index: 1;
-  }
-  .main-content .pagination .page-link {
-    height: 20px;
-    padding: 8px 16px;
-    margin: 2px;
-    border: 1px solid #ccc;
-    text-decoration: none;
-    color: #333;
+    padding: 10px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
   }
-  .main-content .pagination .page-link:hover {
-    background-color: #f2f2f2;
-  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-bottom: 20px;
+  height: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+.pagination .page-link {
+  height: 20px;
+  padding: 8px 16px;
+  margin: 2px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.pagination .page-link:hover {
+  background-color: #f2f2f2;
 }
 
 .pie-pagina {
@@ -285,9 +280,4 @@ body {
 }
 .pie-pagina .item-redes {
   gap: 5px;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .pie-pagina {
-    font-size: 10px;
-  }
 }/*# sourceMappingURL=style.css.map */
