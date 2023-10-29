@@ -243,15 +243,14 @@ body {
         }
       }
     }
-
   }
   @media #{$medium} {
     .contener-cards {
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
-      justify-content: space-between;
-      gap: 12px;
-      width: 100%;
+      align-content: space-around;
+      gap: 30px;
       padding: 10px;
       border-radius: 5px;
     }
@@ -259,19 +258,15 @@ body {
 
   @media #{$large} {
     .contener-cards {
-      padding: 30px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 12px;
-      width: 100%;
       padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-content: space-around;
       border-radius: 5px;
+      gap: 30px;
     }
   }
-    
-
-
 }
 .pagination {
   display: flex;
